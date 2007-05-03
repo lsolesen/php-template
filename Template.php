@@ -15,6 +15,9 @@
  * @author  Lars Olesen <lars@legestue.net>
  * @since   0.2.0
  * @version @package-version@
+ * @link    http://www.sitepoint.com/article/beyond-template-engine
+ * @license MIT Open Source License
+ * @link    http://opensource.org/osi3.0/licenses/mit-license.php
  */
 
 class Template {

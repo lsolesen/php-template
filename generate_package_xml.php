@@ -8,6 +8,13 @@
  * @version @package-version@
  */
 
+$version = '0.2.1';
+$stability = 'alpha';
+$notes = '
+* initial release as PEAR
+* added assign() and display() to implement same interface as Smarty and Savant3
+* improved docblock comments';
+
 require_once 'PEAR/PackageFileManager2.php';
 PEAR::setErrorHandling(PEAR_ERROR_DIE);
 $pfm = new PEAR_PackageFileManager2();
@@ -18,14 +25,14 @@ $pfm->setOptions(
         'packagedirectory'  => dirname(__FILE__),
         'packagefile'       => 'package.xml',
         'ignore'            => array(
-			'generate_package_xml.php',
-			'package.xml',
-			'*.tgz'
-			),
-		'exceptions'        => array(
-		),
+            'generate_package_xml.php',
+            'package.xml',
+            '*.tgz'
+            ),
+        'exceptions'        => array(
+        ),
         'simpleoutput'      => true,
-	)
+    )
 );
 
 $pfm->setPackage('Template');
@@ -37,11 +44,11 @@ $pfm->addMaintainer('lead', 'lsolesen', 'Lars Olesen', 'lars@legestue.net');
 
 $pfm->setPackageType('php');
 
-$pfm->setAPIVersion('0.1.0');
-$pfm->setReleaseVersion('0.2.0');
-$pfm->setAPIStability('alpha');
-$pfm->setReleaseStability('beta');
-$pfm->setNotes('Initial release as a PEAR package');
+$pfm->setAPIVersion($version);
+$pfm->setReleaseVersion($version);
+$pfm->setAPIStability($stability);
+$pfm->setReleaseStability($stability);
+$pfm->setNotes($notes);
 $pfm->addRelease();
 
 $pfm->addGlobalReplacement('package-info', '@package-version@', 'version');
@@ -53,10 +60,10 @@ $pfm->setPearinstallerDep('1.5.0');
 $pfm->generateContents();
 
 if (isset($_GET['make']) || (isset($_SERVER['argv']) && @$_SERVER['argv'][1] == 'make')) {
-	echo 'write package file';
-    $pfm->writePackageFile();
+    if ($pfm->writePackageFile()) {
+        exit('package file written');
+    }
 } else {
-	echo 'debug package file';
     $pfm->debugPackageFile();
 }
 ?>

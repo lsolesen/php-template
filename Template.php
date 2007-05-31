@@ -5,23 +5,43 @@
  * Implements the same interface as Savant3 and Smarty, but is much more
  * lightweight.
  *
- * PHP version 4 and 5
+ * It is originally created in this Sitepoint article:
+ * http://www.sitepoint.com/article/beyond-template-engine
  *
- * Usage
- * $tpl = new Template('/path/to/templates');
- * $tpl->set('variable', 'some value');
- * $tpl->display('template-tpl.php');
+ * PHP version 4 and 5
  *
  * @category  Template
  * @package   Template
- * @version   @package-version@
  * @author    Brian E. Lozier <brian@massassi.net>
  * @author    Lars Olesen <lars@legestue.net>
  * @copyright 2007 The authors
  * @license   MIT Open Source License http://opensource.org/osi3.0/licenses/mit-license.php
- * @link      http://www.sitepoint.com/article/beyond-template-engine
+ * @version   @package-version@
+ * @link      http://public.intraface.dk/index.php?package=Template
  */
 
+/**
+ * Template engine
+ *
+ * Implements the same interface as Savant3 and Smarty, but is much more
+ * lightweight.
+ *
+ * Usage
+ * <code>
+ * $tpl = new Template('/path/to/templates');
+ * $tpl->set('variable', 'some value');
+ * $tpl->display('template-tpl.php');
+ * </code>
+ *
+ * @category  Template
+ * @package   Template
+ * @author    Brian E. Lozier <brian@massassi.net>
+ * @author    Lars Olesen <lars@legestue.net>
+ * @copyright 2007 The authors
+ * @license   MIT Open Source License http://opensource.org/osi3.0/licenses/mit-license.php
+ * @version   @package-version@
+ * @link      http://public.intraface.dk/index.php?package=Template
+ */
 class Template
 {
     var $vars; /// Holds all the template variables
@@ -135,20 +155,22 @@ class Template
  * PHP version 4 og 5
  *
  * Usage
+ * <code>
  * $tpl = & new CachedTemplate('/path/to/templates/', '/path/to/cache/', $cache_identifier_for_page);
  * if (!($tpl->is_cached())) {
  *     $tpl->set('title', 'some value');
  * }
- * echo $tpl->fetch_cache('main-tpl.php');
+ * $tpl->display('main-tpl.php');
+ * </code>
  *
  * @category  Template
  * @package   Template
- * @version   @package-version@
  * @author    Brian E. Lozier <brian@massassi.net>
  * @author    Lars Olesen <lars@legestue.net>
  * @copyright 2007 The authors
  * @license   MIT Open Source License http://opensource.org/osi3.0/licenses/mit-license.php
- * @link      http://www.sitepoint.com/article/beyond-template-engine
+ * @version   @package-version@
+ * @link      http://public.intraface.dk/index.php?package=Template
  */
 class Template_Cache extends Template
 {

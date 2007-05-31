@@ -26,7 +26,6 @@ $pfm->setOptions(
         'packagefile'       => 'package.xml',
         'ignore'            => array(
             'generate_package_xml.php',
-            'package.xml',
             '*.tgz'
             ),
         'exceptions'        => array(
@@ -38,8 +37,8 @@ $pfm->setOptions(
 $pfm->setPackage('Template');
 $pfm->setSummary('Template engine which uses php as markup language');
 $pfm->setDescription('A really simple template engine.');
-$pfm->setUri('http://localhost/');
-$pfm->setLicense('LGPL License', 'http://www.gnu.org/licenses/lgpl.html');
+$pfm->setChannel('public.intraface.dk');
+$pfm->setLicense('MIT Open Source License', 'http://opensource.org/osi3.0/licenses/mit-license.php');
 $pfm->addMaintainer('lead', 'lsolesen', 'Lars Olesen', 'lars@legestue.net');
 
 $pfm->setPackageType('php');

@@ -2,7 +2,7 @@
 /**
  * Template engine
  *
- * Implements the same interface as Savant3 and Smarty, but is much more
+ * Implements the same interface as Savant3 and Smarty, but is more
  * lightweight.
  *
  * It is originally created in this Sitepoint article:
@@ -23,7 +23,7 @@
 /**
  * Template engine
  *
- * Implements the same interface as Savant3 and Smarty, but is much more
+ * Implements the same interface as Savant3 and Smarty, but is more
  * lightweight.
  *
  * Usage

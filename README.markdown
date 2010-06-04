@@ -45,6 +45,6 @@ And it can be used with the following templates.
         </head>  
         <body>  
             <h2><?=$title;?></h2>  
-            ?=$body;?>  
+            <?=$body;?>  
         </body>  
     </html>   

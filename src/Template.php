@@ -54,13 +54,13 @@ class Template
      *
      * @return void
      */
-    function Template($path)
+    function Template($path = '')
     {
         $this->path = $path;
         $this->vars = array();
     }
 
-    static function create($path)
+    static function create($path = '')
     {
         return new Template($path);
     }

@@ -54,13 +54,13 @@ class Template
      *
      * @return void
      */
-    function Template($path = null)
+    function Template($path)
     {
         $this->path = $path;
         $this->vars = array();
     }
 
-    static function create($path = null)
+    static function create($path)
     {
         return new Template($path);
     }
@@ -267,4 +267,4 @@ class Template_Cache extends Template
         }
     }
 }
-?>
+

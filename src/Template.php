@@ -60,16 +60,22 @@ class Template
         $this->vars = array();
     }
 
+    static function create($path = null)
+    {
+        return new Template($path);
+    }
+
     /**
      * Set the path to the template files.
      *
      * @param string $path path to template files
      *
-     * @return void
+     * @return Template
      */
     function setPath($path)
     {
         $this->path = $path;
+        return $this;
     }
 
     /**
@@ -78,11 +84,12 @@ class Template
      * @param string $name  name of the variable to set
      * @param mixed  $value the value of the variable
      *
-     * @return void
+     * @return Template
      */
     function assign($name, $value)
     {
         $this->vars[$name] = $value;
+        return $this;
     }
 
     /**
@@ -93,11 +100,12 @@ class Template
      *
      * @deprecated This will probably be deprecated in next version
      *
-     * @return void
+     * @return Template
      */
     function set($name, $value)
     {
         $this->vars[$name] = $value;
+        return $this;
     }
 
     /**
@@ -106,7 +114,7 @@ class Template
      * @param array $vars  array of vars to set
      * @param bool  $clear whether to completely overwrite the existing vars
      *
-     * @return void
+     * @return Template
      */
     function setVars($vars, $clear = false)
     {
@@ -115,6 +123,7 @@ class Template
         } else {
             if (is_array($vars)) $this->vars = array_merge($this->vars, $vars);
         }
+        return $this;
     }
 
     /**

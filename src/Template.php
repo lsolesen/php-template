@@ -60,6 +60,11 @@ class Template
         $this->vars = array();
     }
 
+    static function create($path = null)
+    {
+        return new Template($path);
+    }
+
     /**
      * Set the path to the template files.
      *

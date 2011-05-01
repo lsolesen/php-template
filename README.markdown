@@ -3,6 +3,8 @@ PHP Template Engine
 
 Very simple template engine for PHP Version 4 and 5. It is based on the article [Beyond the template engine](http://articles.sitepoint.com/article/beyond-template-engine) by Brian Lozier.
 
+For a more current PHP 5 implementation of the same ideas, check out [phpsavant.com](http://phpsavant.com/).
+
 Example
 --
 

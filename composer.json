@@ -1,0 +1,26 @@
+{
+    "name": "lsolesen/php-template",
+    "type": "library",
+    "description": "Lightweight template engine with the same interface as Savant3 and Smarty.",
+    "keywords": [
+        "template"
+    ],
+    "homepage": "https://github.com/lsolesen/php-template",
+    "authors": [
+        {
+            "name": "Lars Olesen",
+            "email": "lars@intraface.dk",
+            "homepage": "http://intraface.dk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src",
+            "Template.php"
+        ]
+    }
+}

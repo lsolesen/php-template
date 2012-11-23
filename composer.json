@@ -18,9 +18,8 @@
         "php": ">=5.0.0"
     },
     "autoload": {
-        "classmap": [
-            "src",
-            "Template.php"
+        "files": [
+            "src/Template.php"
         ]
     }
 }

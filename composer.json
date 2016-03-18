@@ -15,11 +15,11 @@
             "role": "Developer"
         }
     ],
-    "require-dev": {
-        "squizlabs/php_codesniffer": "2.*"
-    }
     "require": {
         "php": ">=5.0.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "2.*"
     },
     "autoload": {
         "files": [

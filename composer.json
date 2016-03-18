@@ -2,6 +2,7 @@
     "name": "lsolesen/php-template",
     "type": "library",
     "description": "Lightweight template engine with the same interface as Savant3 and Smarty.",
+    "license": "MIT",
     "keywords": [
         "template"
     ],

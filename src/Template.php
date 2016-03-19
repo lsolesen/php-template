@@ -8,16 +8,16 @@
  * It is originally created in this Sitepoint article:
  * http://www.sitepoint.com/article/beyond-template-engine
  *
- * PHP version 4 and 5
+ * PHP version 4
  *
  * @category  Template
  * @package   Template
  * @author    Brian E. Lozier <brian@massassi.net>
  * @author    Lars Olesen <lars@legestue.net>
  * @copyright 2007 The authors
- * @license   MIT Open Source License http://opensource.org/osi3.0/licenses/mit-license.php
+ * @license   MIT Open Source License https://opensource.org/licenses/MIT
  * @version   @package-version@
- * @link      http://public.intraface.dk/index.php?package=Template
+ * @link      https://github.com/lsolesen/php-template
  */
 
 /**
@@ -38,9 +38,9 @@
  * @author    Brian E. Lozier <brian@massassi.net>
  * @author    Lars Olesen <lars@legestue.net>
  * @copyright 2007 The authors
- * @license   MIT Open Source License http://opensource.org/osi3.0/licenses/mit-license.php
+ * @license   MIT Open Source License https://opensource.org/licenses/MIT
  * @version   @package-version@
- * @link      http://public.intraface.dk/index.php?package=Template
+ * @link      https://github.com/lsolesen/php-template
  */
 class Template
 {
@@ -267,4 +267,3 @@ class Template_Cache extends Template
         }
     }
 }
-

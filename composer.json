@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": ">=4.4.*"
+        "php": ">=4.4.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*"

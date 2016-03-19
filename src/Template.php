@@ -249,7 +249,7 @@ class Template_Cache extends Template
      */
     function fetch($file)
     {
-        if ($this->is_cached()) {
+        if ($this->isCached()) {
             $fp = @fopen($this->cache_id, 'r');
             $contents = fread($fp, filesize($this->cache_id));
             fclose($fp);

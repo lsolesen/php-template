@@ -121,7 +121,9 @@ class Template
         if ($clear) {
             $this->vars = $vars;
         } else {
-            if (is_array($vars)) $this->vars = array_merge($this->vars, $vars);
+            if (is_array($vars)) {
+                $this->vars = array_merge($this->vars, $vars);
+            }
         }
         return $this;
     }
@@ -212,16 +214,24 @@ class Template_Cache extends Template
      */
     function isCached()
     {
-        if ($this->cached) return true;
+        if ($this->cached) {
+            return true;
+        }
 
         // Passed a cache_id?
-        if (!$this->cache_id) return false;
+        if (!$this->cache_id) {
+            return false;
+        }
 
         // Cache file exists?
-        if (!file_exists($this->cache_id)) return false;
+        if (!file_exists($this->cache_id)) {
+            return false;
+        }
 
         // Can get the time of the file?
-        if (!($mtime = filemtime($this->cache_id))) return false;
+        if (!($mtime = filemtime($this->cache_id))) {
+            return false;
+        }
 
         // Cache expired?
         if (($mtime + $this->expire) < time()) {
